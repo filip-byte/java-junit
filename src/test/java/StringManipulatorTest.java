@@ -44,10 +44,12 @@ class StringManipulatorTest {
         String input1 = "Mu";
         String input = "";
         String inputPalindrome = "Mum";
+        String evenLenghtInput = "mmoonnoomm";
 
         boolean result1 = stringManipulator.isPalindrome(input1);
         boolean result2 = stringManipulator.isPalindrome(input);
         boolean result3 = stringManipulator.isPalindrome(inputPalindrome);
+        boolean result4 = stringManipulator.isPalindrome(evenLenghtInput);
 
         assertAll(
                 () -> assertNotNull(input),
@@ -55,7 +57,8 @@ class StringManipulatorTest {
                 () -> assertNotNull(inputPalindrome),
                 () -> assertFalse(result1),
                 () -> assertFalse(result2),
-                () -> assertTrue(result3)
+                () -> assertTrue(result3),
+                () -> assertTrue(result4)
         );
 
 
